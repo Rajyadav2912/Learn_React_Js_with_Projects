@@ -12,6 +12,10 @@
     @tailwind utilities;
     }
 8.  npm create vite@latest my-vue-app -- --template vue (Setup Vite + React.js)
+9.  npm i formik
+10. npm i react-toastify (for alert Message)
+11. npm i yup (for validation)
+12. Ctrl + shift + p ( for browser window open in VS Code )
 
 # Getting Started with Create React App
 
