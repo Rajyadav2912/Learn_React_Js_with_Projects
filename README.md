@@ -11,6 +11,7 @@
     @tailwind components;
     @tailwind utilities;
     }
+8.  npm create vite@latest my-vue-app -- --template vue (Setup Vite + React.js)
 
 # Getting Started with Create React App
 
