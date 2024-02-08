@@ -81,7 +81,7 @@ const App = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-[370px] px-4">
+      <div className="mx-auto max-w-[370px] mt-12 px-4">
         <NavBar />
         <div className="flex gap-2">
           <div className="relative flex flex-grow items-center">
@@ -111,7 +111,7 @@ const App = () => {
       </div>
 
       <AddandUpdateContact isOpen={isOpen} onClose={onClose} />
-      <ToastContainer position="bottom-center" />
+      <ToastContainer position="bottom-center" className="mb-[10rem]" />
     </>
   );
 };
