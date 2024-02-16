@@ -1,33 +1,3 @@
-# ALL COMMANDS TO RUN & SETUP PROJECT
-
-   <!-- React install guide -->
-
-1.  npx create-react-app my-app-name (or - using )
-2.  npm install for all packages install
-3.  npm start
-4.  npm install -D prettier prettier-plugin-tailwindcss (Setup prettier)
-
-    <!-- Tailwind install guide -->
-
-5.  npm install -D tailwindcss (Setup Tailwind)
-6.  npx tailwindcss init
-7.  { // add this 3 line index.css file
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    }
-
-    <!--  Vite + React install Guide-->
-
-8.  npm create vite@latest my-vue-app -- --template vue (Setup Vite + React.js)
-9.  npm i formik
-
-<!-- Add Tosted Notification -->
-10. npm i react-toastify (for alert Message)
-11. npm i yup (for validation)
-
-12. Ctrl + shift + p ( for browser window open in VS Code )
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
