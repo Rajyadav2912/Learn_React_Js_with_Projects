@@ -6,7 +6,6 @@ const Card = (props) => {
   const course = props.course;
   const likedCourse = props.likedCourse;
   const setLikedCourses = props.setLikedCourses;
-  
 
   function clickHandler() {
     // logic
@@ -32,7 +31,10 @@ const Card = (props) => {
     <div className="w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden ">
       <div className="relative">
         <img src={course.image.url} alt={course.image.alt} />
-        <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-3 grid place-items-center">
+        <div
+          className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px] 
+        grid place-items-center"
+        >
           <button onClick={clickHandler}>
             {likedCourse.includes(course.id) ? (
               <FcLike fontSize="1.75rem" />

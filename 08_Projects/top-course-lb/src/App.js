@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { Spinner } from "./Component/Spinner";
 
 const App = () => {
-  const [courses, setCourses] = useState(null);
+  const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState(filterData[0].title);
 
@@ -23,6 +23,7 @@ const App = () => {
       // console.log(result.data);
     } catch (error) {
       toast.error("something went wrong");
+      // console.log("error ayi hn ");
     }
     setLoading(false);
   };
@@ -45,10 +46,8 @@ const App = () => {
             setCategory={setCategory}
           />
         </div>
-        <div
-          className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center 
-        items-center min-h-[50vh]"
-        >
+
+        <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
           {loading ? (
             <Spinner />
           ) : (

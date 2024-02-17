@@ -23,6 +23,7 @@ const Cards = (props) => {
       return allCourses;
     } else {
       // main sirf specific category ka data array krunga
+      // console.log(courses[category]);
       return courses[category];
     }
   };

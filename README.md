@@ -16,13 +16,22 @@
     @tailwind components;
     @tailwind utilities;
     }
+8.  /** @type {import('tailwindcss').Config} \*/
+    module.exports = {
+    content: ["./src/**/\*.{js,jsx,ts,tsx}"],
+    theme: {
+    extend: {},
+    },
+    plugins: [],
+    };
 
-    <!--  Vite + React install Guide-->
+        <!--  Vite + React install Guide-->
 
-8.  npm create vite@latest my-vue-app -- --template vue (Setup Vite + React.js)
-9.  npm i formik
+9.  npm create vite@latest my-vue-app -- --template vue (Setup Vite + React.js)
+10. npm i formik
 
 <!-- Add Tosted Notification -->
+
 10. npm i react-toastify (for alert Message)
 11. npm i yup (for validation)
 
