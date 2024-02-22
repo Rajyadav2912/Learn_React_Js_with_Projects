@@ -54,7 +54,7 @@ const App = () => {
 
   const filterContacts = (err) => {
     const value = err.target.value;
-    console.log(value);
+    // console.log(value);
 
     const contactsRef = collection(db, "contact-app-crud");
     // const contactsSnapshot = await getDocs(contactsRef);

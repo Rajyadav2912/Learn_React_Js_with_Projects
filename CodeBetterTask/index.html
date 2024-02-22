@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table,
+        tr,
+        th,
+        td,
+        button {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="w-[100%] h-[100vh] p-10 pt-5 bg-[#86eeee] overflow-x-hidden">
+        <table class="w-[50%] mx-auto my-0 border-black border-[1px] bg-[#e0e396]">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3152</td>
+                    <td>Raj Yadav</td>
+                    <td>21</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        <button class="w-26 mx-[50%] mt-5 px-6 py-[5px] rounded-md bg-white">Submit</button>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
