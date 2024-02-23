@@ -18,7 +18,7 @@ const Cards = (props) => {
         });
       });
 
-      // console.log(allCourses);
+      console.log(allCourses);
 
       return allCourses;
     } else {

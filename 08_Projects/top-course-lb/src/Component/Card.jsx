@@ -43,7 +43,7 @@ const Card = (props) => {
             )}
           </button>
         </div>
-      </div>
+      </div> 
       <div className="p-4 text-white">
         <p className="font-semibold text-lg leading-6">{course.title}</p>
         <p className="mt-2">
