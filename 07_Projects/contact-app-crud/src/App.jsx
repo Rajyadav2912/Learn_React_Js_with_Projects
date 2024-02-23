@@ -10,7 +10,6 @@ import useDisclouse from "./hooks/useDisclouse";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { IoMdToday } from "react-icons/io";
 import NotFoundContact from "./Components/NotFoundContact";
 
 const App = () => {
@@ -34,6 +33,7 @@ const App = () => {
 
         onSnapshot(contactsRef, (snapshot) => {
           const contactLists = snapshot.docs.map((doc) => {
+            // return in object
             return {
               id: doc.id,
               ...doc.data(),
@@ -81,11 +81,11 @@ const App = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-[370px] mt-12 px-4">
+      <div className="mx-auto max-w-[370px] mt-12 px-4 border">
         <NavBar />
         <div className="flex gap-2">
           <div className="relative flex flex-grow items-center">
-            <FiSearch className="absolute ml-2 text-3xl text-white " />
+            <FiSearch className="absolute ml-1 text-3xl text-white " />
             <input
               onChange={filterContacts}
               type="text"
@@ -95,7 +95,7 @@ const App = () => {
           <div>
             <AiFillPlusCircle
               onClick={onOpen}
-              className="text-4xl cursor-pointer text-white"
+              className="text-4xl cursor-pointer text-white "
             />
           </div>
         </div>

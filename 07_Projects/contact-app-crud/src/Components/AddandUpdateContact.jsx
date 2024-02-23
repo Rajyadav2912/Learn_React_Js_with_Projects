@@ -62,7 +62,11 @@ const AddandUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
           <Form className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <label htmlFor="name">Name</label>
-              <Field className="h-10 border rounded-md px-2" name="name" />
+              <Field
+                type="text"
+                className="h-10 border rounded-md px-2"
+                name="name"
+              />
               <div className="text-red font-semibold text-xs">
                 {/* for vaildate error message */}
                 <ErrorMessage name="name" />
@@ -70,7 +74,11 @@ const AddandUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="email">Email</label>
-              <Field className="h-10 border rounded-md px-2" name="email" />
+              <Field
+                type="email"
+                className="h-10 border rounded-md px-2"
+                name="email"
+              />
               <div className="text-red font-semibold text-xs">
                 {/* for vaildate error message */}
                 <ErrorMessage name="email" />
