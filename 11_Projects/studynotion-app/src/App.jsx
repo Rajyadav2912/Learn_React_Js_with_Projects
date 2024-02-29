@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import { NavBar } from "./component/NavBar";
 import About from "./pages/About";
 import { Contact } from "./pages/Contact";
+import PrivateRoute from "./component/PrivateRoute";
 
 const App = () => {
   const [isloggedIn, setIsLoggedIn] = useState(false);
@@ -16,7 +17,7 @@ const App = () => {
     <div className="w-screen h-screen bg-richblack-900 flex flex-col text-white">
       <NavBar isloggedIn={isloggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isloggedIn={isloggedIn} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route
@@ -27,7 +28,14 @@ const App = () => {
           path="/signup"
           element={<Signup setIsLoggedIn={setIsLoggedIn} />}
         />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute isloggedIn={isloggedIn}>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );
