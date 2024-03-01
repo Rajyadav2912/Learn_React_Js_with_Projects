@@ -24,12 +24,12 @@ const RandomGifs = () => {
   //     fetchData();
   //   }, []);
 
-  const { gif, loading, fetchData } = usegifs();
+  //   function clickHandler() {
+  //     console.log("click hua ");
+  //     fetchData();
+  //   }
 
-//   function clickHandler() {
-//     console.log("click hua ");
-//     fetchData();
-//   }
+  const { gif, loading, fetchData } = usegifs();
 
   return (
     <div
@@ -40,7 +40,11 @@ const RandomGifs = () => {
         A Random Gifs
       </h2>
 
-      {loading ? <Spinner /> : <img src={gif} alt="gif" width={400} />}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <img src={gif} alt="gif" width={400} className="rounded-xl" />
+      )}
 
       <button
         onClick={() => fetchData()}

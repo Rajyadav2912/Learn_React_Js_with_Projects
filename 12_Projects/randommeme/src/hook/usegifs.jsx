@@ -1,3 +1,5 @@
+// Default hooks
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -5,17 +7,16 @@ import axios from "axios";
 
 const API_KEY = "GeUvSahAAoSYYq7KNgasjMj7LfZhJ9Hc";
 
-const randomMemeurl = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
-const tagMemeurl = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tag}`;
+const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}`;
 
 const usegifs = (tag) => {
   const [gif, setgif] = useState("");
   const [loading, setloading] = useState("false");
 
-  const fetchData = async () => {
+  const fetchData = async (tag) => {
     setloading(true);
 
-    const { data } = await axios.get(tag ? tagMemeurl : randomMemeurl);
+    const { data } = await axios.get(tag ? `${url}&tag=${tag}` : url);
     const imageSearch = data.data.images.downsized_large.url;
     setgif(imageSearch);
     setloading(false);
