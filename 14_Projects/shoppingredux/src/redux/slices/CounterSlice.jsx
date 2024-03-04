@@ -1,4 +1,3 @@
-import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -28,5 +27,7 @@ export const CounterSlice = createSlice({
 // Action creators are generated for each case reducer function
 // action creator me humre function ka behaviour store ho jata hn
 export const { increment, decrement } = CounterSlice.actions;
+
+export const selectCount = (state) => state.counter.value;
 
 export default CounterSlice.reducer;
