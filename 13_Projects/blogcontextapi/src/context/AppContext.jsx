@@ -10,7 +10,7 @@ function AppContextProvider({ children }) {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
 
-  //   data fillin pending
+  //   data filling pending
 
   async function fetchBlogPosts(page = 1) {
     setLoading(true);
